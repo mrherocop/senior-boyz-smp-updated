@@ -1,0 +1,96 @@
+@font-face {
+    font-family: mc;
+    src: url(ProtestGuerrilla-Regular.ttf);
+  }
+
+body {
+    background-image: url(background.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto; /* changed from cover to 100% auto */
+    background-position: center; /* keeps the image centered */
+    margin: 0;
+    padding: 0;
+    height: 96.5vh;
+    width: 98vw; 
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    font-family: 'mc';
+    font-weight: 50;
+    color:#573537;
+}
+
+h1 {
+    color: #ffffff;
+    border: 1px solid #67b481; /* add a 1px solid border with the same color as the text */
+    padding: 5px; /* add some padding to create some space between the border and the text */
+    border-radius: 5px; /* add a slight rounded corner to the border */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* add transition effect */
+}
+
+h1:hover {
+    background-color: #67b481; /* change the background color to solid #67b481 on hover */
+    color: #ffffff; /* change the text color to white on hover */
+    border-color: #67b481; /* change the border color to match the background color on hover */
+}
+
+.server-status{
+    color:#573537;
+}
+
+/* Add this to target screens with a maximum width of 768px (e.g., tablets) */
+@media (max-width: 768px) {
+    body {
+        background-size: cover; /* adjust the background size for smaller screens */
+    }
+}
+
+/* Add this to target screens with a maximum width of 480px (e.g., mobile devices) */
+@media (max-width: 480px) {
+    body {
+        background-size: cover; /* adjust the background size for smaller screens */
+    }
+}
+
+/* Add this to target iPad Pro screens */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+    body {
+        background-size: cover; /* make the image cover the whole page on iPad Pro */
+    }
+}
+
+/* Add this to target landscape mode on devices larger than tablets */
+@media (min-width: 769px) and (orientation: landscape) {
+    body {
+        background-size: cover; /* adjust the background size for larger screens in landscape mode */
+    }
+    main {
+        width: 70%;
+        max-width: 500px;
+        padding: 25px;
+    }
+}
+
+/* Add this to target portrait mode on devices larger than tablets */
+@media (min-width: 769px) and (orientation: portrait) {
+    body {
+        background-size: cover; /* adjust the background size for larger screens in portrait mode */
+    }
+    main {
+        width: 80%;
+        max-width: 400px;
+        padding: 20px;
+    }
+}
