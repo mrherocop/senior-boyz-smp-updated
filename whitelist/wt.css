@@ -1,0 +1,36 @@
+/* style.css */
+
+body {
+    /* Replace 'your-background-image.jpg' with your actual image path */
+    background-image: url('/assets/images/grass.png'); 
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.2); /* Adjust transparency as needed */
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px); /* Adjust blur intensity */
+    padding: 20px;
+    max-width: 800px; /* Adjust max container width as needed */
+}
+
+/* Media Query for iPhone X and smaller screens */
+@media only screen and (max-width: 786px) { 
+    .container {
+        padding: 10px;
+        max-width: 95%;
+    }
+    
+    iframe {
+        width: 100%;
+        height: 400px; /* Adjust height as needed */
+    }
+}
